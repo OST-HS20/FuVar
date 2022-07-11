@@ -1,0 +1,49 @@
+\section{Vektorfelder}
+\label{konservativ}
+Ein \textbf{Gradientenfeld} oder \textbf{konservatives Feld} ist ein Vektorfeld, dass dessen Kurvenintegral wegunabhängig sind. Damit existiert ein \textbf{Potenzial $\phi$} Funktion:
+\[
+\vec{F} = \nabla\phi(\vec{x})= \begin{pmatrix}
+	\phi_{x_1} \\\vdots \\ 	\phi_{x_n}
+\end{pmatrix}
+\]
+Nach Division mit $dt$
+\[
+\frac{d\phi(\vec{x}(t))}{dt} = \nabla\phi(\vec{x})\cdot \vec{x}'(t) \xrightarrow{} [\phi(\vec{x}(t))]_{t=r}^{t=s}
+\]
+~\\
+
+\noindent Damit sind die \textbf{Integrabilitätsbedingungen} erfüllt. d.h. im 2D $\frac{\partial F_1}{\partial x_2} = \frac{\partial F_2}{\partial x_1}$ im 3D $\frac{\partial F_1}{\partial x_2} = \frac{\partial F_2}{\partial x_1}$,$\frac{\partial F_2}{\partial x_3} = \frac{\partial F_3}{\partial x_2}$, $\frac{\partial F_3}{\partial x_1} = \frac{\partial F_1}{\partial x_3}$. Kann auch mit $\rot\vec{F} = \vec{0}$ überprüft werden.
+
+
+\subsection{Divergenz}
+\[
+\div \vec{F} = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} \left( + \frac{\partial F_3}{\partial z}\right) = \vec{\nabla} \bullet \vec{F}
+\]
+
+\noindent Integralsatz von Gauss:
+\[
+\int_V\div\vec{F}dV = \oint_{O = \partial V}\vec{F}\bullet d\vec{O}
+\]
+
+
+\subsection{Rotation} in einem zwei- bzw. dreidimensionalen Vektorfeldes:
+\[
+\rot\vec{F} = \begin{pmatrix}
+	0 \\0 \\ \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}
+\end{pmatrix} \quad \text{bzw.} \rot\vec{F} = \begin{pmatrix}
+\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z} \\
+\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x} \\
+\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}
+\end{pmatrix}
+= \vec{\nabla}\times \vec{F}
+\]
+
+
+\noindent Integralsatz von Stokes
+\[
+\int_O\rot\vec{F}\bullet d\vec{O} = \oint_{ \partial O}\vec{F}(\vec{x})\bullet d\vec{x}
+\]
+\noindent Satz von Green
+\[
+\int_O\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} dO = \oint_{\partial O}\vec{F}(\vec{x})\bullet d\vec{x}
+\]
